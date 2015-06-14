@@ -27,11 +27,11 @@ makeCacheMatrix <- function(normal_m = matrix()) {
 }
 
 
-## cacheSolve takes a makeCacheMatrix function list argument x and calls the get
-## function from list x to retreive the cached inverse matrix. If the inverse
-## matrix is not already cached, cacheSolve computes the inverse matrix, then
-## calls the set function from list x to cache the inverse matrix for future 
-## lookups.
+## cacheSolve takes a makeCacheMatrix function list argument x and calls the 
+## getInv function from list x to retreive the cached inverse matrix. If the
+## inverse matrix is not already cached, cacheSolve computes the inverse matrix,
+## then calls the setInv function from list x to cache the inverse matrix for
+## future lookups.
 cacheSolve <- function(x, ...) {
     # Retrieve the cached matrix
     cached <- x$getInv()
